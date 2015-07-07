@@ -33,3 +33,4 @@ script:
 cache:
   directories:
     - $TRAVIS_BUILD_DIR/.gradle
+    - $HOME/.gradle

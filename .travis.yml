@@ -31,5 +31,5 @@ script:
   - ./gradlew assembleDebug
 
 cache:
-  directory:
-    - .gradle
+  directories:
+    - $TRAVIS_BUILD_DIR/.gradle

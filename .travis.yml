@@ -28,4 +28,8 @@ before_install:
   - scripts/test.sh
 
 script:
-  - ./gradlew assemblyDebug
+  - ./gradlew assembleDebug
+
+cache:
+  directory:
+    - .gradle

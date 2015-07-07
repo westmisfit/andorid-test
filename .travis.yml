@@ -1,0 +1,4 @@
+language: android
+
+before_install:
+  - scripts/test.sh

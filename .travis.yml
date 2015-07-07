@@ -26,3 +26,6 @@ android:
 
 before_install:
   - scripts/test.sh
+
+script:
+  - ./gradlew assemblyDebug

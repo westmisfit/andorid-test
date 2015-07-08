@@ -24,8 +24,14 @@ android:
     # - sys-img-armeabi-v7a-android-19
     # - sys-img-x86-android-17
 
+env:
+  global:
+    - PATH=$PATH:$HOME/travis-ext
+
 before_install:
+  - git clone --depth=50 --branch=develop https://github.com/westmisfit/travis-ext.git $HOME/travis-ext
   - scripts/test.sh
+  - travis-ext.sh install_infer
 
 script:
   - ./gradlew assembleDebug

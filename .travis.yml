@@ -26,12 +26,14 @@ android:
 
 env:
   global:
-    - PATH=$PATH:$HOME/travis-ext
+    - TRAVIS_EXT_HOME=$HOME/travis-ext
+    - TRAVIS_EXT=$$TRAVIS_EXT_HOME/travis-ext.sh
+    - PROJECT_LANGUAGE=android
 
 before_install:
   - git clone --depth=50 --branch=develop https://github.com/westmisfit/travis-ext.git $HOME/travis-ext
   - scripts/test.sh
-  - travis-ext.sh install_infer
+  - $TRAVIS_EXT install_infer
 
 script:
   - ./gradlew assembleDebug

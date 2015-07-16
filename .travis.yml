@@ -37,7 +37,7 @@ before_install:
   - $TRAVIS_EXT install_infer
 
 script:
-  - ./gradlew assembleDebug
+  - infer -- ./gradlew assembleDebug
 
 cache:
   directories:

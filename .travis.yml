@@ -29,7 +29,7 @@ env:
   global:
     - TRAVIS_EXT_HOME="$HOME/travis-ext"
     - TRAVIS_EXT="$TRAVIS_EXT_HOME/travis-ext.sh"
-    - PROJECT_LANGUAGE="android"
+    - TRAVIS_EXT_VERBOSE=true
     - PATH=$PATH:$HOME/infer/infer/infer/bin
 
 before_install:

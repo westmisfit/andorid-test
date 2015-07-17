@@ -14,6 +14,7 @@ addons:
       - libmpfr-dev
       - libmpc-dev
       - unzip
+      - awscli
 
 android:
   components:
@@ -48,8 +49,10 @@ env:
 
 before_install:
   - git clone --depth=50 --branch=develop https://github.com/westmisfit/travis-ext.git $HOME/travis-ext
-  - scripts/test.sh
+  - python --version
+  - echo "---env--"; env; echo "---end env--"
   - $TRAVIS_EXT install_infer
+  - aws --version
 
 script:
   - infer -- ./gradlew assembleDebug

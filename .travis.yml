@@ -15,6 +15,7 @@ addons:
       - libmpc-dev
       - unzip
       - python-pip
+      - python-dev
 
 android:
   components:
@@ -53,6 +54,7 @@ before_install:
   - echo "---env--"; env; echo "---end env--"
   - $TRAVIS_EXT install_infer
   - pip --version
+  - pip install awscli && aws --version
 
 script:
   - infer -- ./gradlew assembleDebug

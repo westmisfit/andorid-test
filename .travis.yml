@@ -16,6 +16,7 @@ addons:
       - unzip
       - python-pip
       - python-dev
+      - python-virtualenv
 
 android:
   components:

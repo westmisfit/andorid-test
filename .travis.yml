@@ -54,6 +54,8 @@ before_install:
   - echo "---env--"; env; echo "---end env--"
   - $TRAVIS_EXT install_infer
   - pip --version
+  - virtualenv --version
+  - virtualenv $HOME/venv && . $HOME/venv/bin/activate
   - pip install awscli && aws --version
 
 script:
